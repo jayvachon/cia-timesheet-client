@@ -1,0 +1,58 @@
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.App {
+  display: flex;
+  justify-content: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 10px 0;
+}
+.col-sm {
+  flex-basis: 16%;
+}
+.col {
+  flex-basis: 28%;
+}
+.container {
+  padding: 40px 90px;
+  width: 600px;
+  background-color: #ffeefe;
+}
+.hour-input {
+  width: 60px;
+}
+.rate-input {
+  width: 60px;
+}
+.right-label {
+  padding-left: 10px;
+}
+.left-label {
+  padding-right: 10px;
+}
+.right-column {
+  text-align: right;
+}
+.name-input {
+  font-size: 20px;
+  padding: 5px 10px;
+}
+.submit {
+    font-size: 20px;
+    padding: 5px 10px;
+}
+hr {
+  margin: 20px 0;
+}
+input {
+  border-color: hsl(0, 0%, 70%);
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  min-height: 20px;
+}
