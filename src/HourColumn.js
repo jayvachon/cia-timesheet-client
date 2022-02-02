@@ -65,23 +65,28 @@ class HourColumn extends Component {
 	}
 
 	getSumTeaching() {
-		return this.state.hours.teaching.length > 0 ? this.state.hours.teaching.reduce((p, c) => p + c) : 0
+		const sum = this.state.hours.teaching.length > 0 ? this.state.hours.teaching.reduce((p, c) => p + c) : 0
+		return Math.round((sum + Number.EPSILON) * 100) / 100
 	}
 
 	getSumPrep() {
-		return this.state.hours.prep.length > 0 ? this.state.hours.prep.reduce((p, c) => p + c) : 0
+		const sum = this.state.hours.prep.length > 0 ? this.state.hours.prep.reduce((p, c) => p + c) : 0
+		return Math.round((sum + Number.EPSILON) * 100) / 100
 	}
 
 	getTeachingPay() {
-		return this.getSumTeaching() * this.state.rates.teaching
+		const pay = this.getSumTeaching() * this.state.rates.teaching
+		return Math.round((pay + Number.EPSILON) * 100) / 100
 	}
 
 	getPrepPay() {
-		return this.getSumPrep() * this.state.rates.prep
+		const pay = this.getSumPrep() * this.state.rates.prep
+		return Math.round((pay + Number.EPSILON) * 100) / 100
 	}
 
 	getTotalPay() {
-		return (this.getSumTeaching() * this.state.rates.teaching) + (this.getSumPrep() * this.state.rates.prep)
+		const total = this.getTeachingPay() + this.getPrepPay()
+		return Math.round((total + Number.EPSILON) * 100) / 100
 	}
 
 	getNetPay() {
