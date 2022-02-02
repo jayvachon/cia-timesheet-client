@@ -24,6 +24,7 @@ const HourInput = (props) => {
 					type='number'
 					max='24'
 					min='0'
+					step='any'
 					onChange={props.callback}
 				 />
 				 <span className="right-label">hours</span>
@@ -36,6 +37,7 @@ const HourInput = (props) => {
 					type='number'
 					max='24'
 					min='0'
+					step='any'
 					onChange={props.callback}
 				 />
 				 <span className="right-label">hours</span>
